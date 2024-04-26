@@ -28,9 +28,11 @@ import {
   TagIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
+
+
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-import img from "../../images/image/1.jpg";
+import img from "../../images/jrapics/jranewwhite.png";
 const navListMenuItems = [
   {
     title: "Civil",
@@ -109,7 +111,7 @@ function NavListMenu() {
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, path }, key) => (
       <Link to={path} key={key}>
-        <MenuItem className=" flex text-center justify-center  ">
+        <MenuItem className="  ">
           <div>
             <Typography
               variant="h6"
@@ -140,7 +142,7 @@ function NavListMenu() {
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              Practice Areas
+              About Us
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -192,7 +194,6 @@ function NavListMenuInsights() {
             </Typography>
           </div>
         </MenuItem>
-       
       </Link>
     )
   );
@@ -209,7 +210,7 @@ function NavListMenuInsights() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-100"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -230,7 +231,7 @@ function NavListMenuInsights() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0 ">
             {renderItems}
           </ul>
         </MenuList>
@@ -250,7 +251,7 @@ function NavList() {
         to="/" // Specify the home path
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-medium text-gray-100"
       >
         <ListItem className="flex items-center gap-2 py-2">Home</ListItem>
       </Typography>
@@ -260,7 +261,7 @@ function NavList() {
         to="/CoreTeam" // Specify the home path
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-medium text-gray-100"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           Core Team
@@ -273,7 +274,7 @@ function NavList() {
         to="/contact" // Specify the contact path
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-medium text-gray-100"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           Contact Us
@@ -299,19 +300,33 @@ export default function Header() {
         <div className="flex items-center justify-between text-blue-gray-100">
           <a
             href="#"
-            className="flex title-font font-medium items-center w-16 h-16 text-gray-100 mb-4"
+            className="flex title-font font-medium items-center w-auto h-16 text-gray-100 mb-4"
           >
             <img src={img} alt="" />
-            <Typography variant="h6" color="blue-gray" >
-           Legal Inkwell
-      </Typography> </a>
+          </a>
           <div className="hidden lg:block">
             <NavList />
           </div>
           <div className="hidden gap-2 lg:flex">
-            <Button variant="gradient" size="sm">
-              Sign In
+          <Typography
+              as={Link} // Use Link instead of a
+              to="/contact" // Specify the contact path
+              variant="small"
+              color="blue-gray"
+              className="font-medium text-gray-100"
+            >
+              {/* <ListItem className="flex items-center gap-2 py-2 pr-4">
+                Contact Us
+              </ListItem> */}
+            <Button size="md" fullWidth className="bg-[#c9b38c] hover:bg-[#b99c69]"> 
+              Contect Us
             </Button>
+            </Typography>
+            
+            
+            {/* <Button variant="gradient" size="sm">
+              Contact Us
+            </Button> */}
           </div>
           <IconButton
             variant="text"
@@ -329,9 +344,20 @@ export default function Header() {
         <Collapse open={openNav}>
           <NavList />
           <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+            <Typography
+              as={Link} // Use Link instead of a
+              to="/contact" // Specify the contact path
+              variant="small"
+              color="blue-gray"
+              className="font-medium text-gray-100"
+            >
+              {/* <ListItem className="flex items-center gap-2 py-2 pr-4">
+                Contact Us
+              </ListItem> */}
             <Button variant="gradient" size="sm" fullWidth>
-              Sign In
+              Contect Us
             </Button>
+            </Typography>
           </div>
         </Collapse>
       </Navbar>
