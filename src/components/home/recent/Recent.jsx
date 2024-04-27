@@ -1,99 +1,71 @@
-import {
-  Card,
-  CardBody,
-  Rating,
-  Typography,
-} from "@material-tailwind/react";
-
-
-export function CardReview({
-  name,
-  feedback,
-  date,
-  title,
-}) {
-  return (
-    <Card shadow={false} className="p-4 " >
-      <CardBody className="pt-0">
-        <Rating value={4} className="text-amber-500" />
-        <Typography
-          variant="h6"
-          color="blue-gray"
-          className="font-bold mb-2 mt-1"
-        >
-          {title}
-        </Typography>
-        <Typography className="text-base font-normal !text-gray-500">
-          {feedback}
-        </Typography>
-        <Typography
-          variant="h6"
-          color="blue-gray"
-          className="font-medium mt-3"
-        >
-          {name}
-        </Typography>
-        <Typography
-          variant="small"
-          className="font-normal !text-gray-500"
-        >
-          {date}
-        </Typography>
-      </CardBody>
-    </Card>
-  );
-}
-
-const CONTENTS = [
-  {
-    title: "This tool has made my workflow seamless",
-    name: "Ryan Samuel",
-    feedback:
-      "I've been using this for a while now, and it's become an essential part of my daily routine. It's incredibly user-friendly and has greatly improved my productivity.",
-    date: "03 March 2024",
-  },
-  {
-    title: "It's made my job so much easier",
-    name: "Emma Roberts",
-    feedback:
-      "This tool has been a game-changer for me. From managing my tasks to collaborating with my team, it's made everything so much easier. Highly recommended!",
-    date: "14 February 2023",
-  },
-  {
-    title: "It's my go-to solution for staying organized.",
-    name: "Bruce Mars",
-    feedback:
-      "I've been using this for a while now, and it's become an essential part of my daily routine. It's incredibly user-friendly and has greatly improved my productivity.",
-    date: "10 February 2023",
-  },
-];
+import React from "react";
+import { IconButton } from "@material-tailwind/react";
+import { RobotoSlab } from "@fontsource/roboto-slab";
 export function Recent() {
   return (
-    <section className="py-20 px-8 bg-[#f7f9fc]">
-      <div className="mx-auto container">
-        <div className="text-center">
-          <Typography variant="h6" className="mb-3 uppercase">
-            Reviews
-          </Typography>
-          <Typography variant="h3">Our Customer&apos;s Opinion</Typography>
-          <Typography className="mt-3 text-center text-[18px] font-normal text-gray-500">
-            From general feedback to detailed accounts, find out why our users
-            love our product.
-          </Typography>
+    <section className="bg-gray-100 py-16" style={{ fontFamily: "Roboto Slab" }}>
+    <div className="container mx-auto px-4">
+      <div className="flex flex-wrap">
+        <div className="w-full md:w-1/3">
+          <div className="text-center md:text-left mb-8 md:mb-0 flex items-center">
+            
+            <IconButton className="rounded-full text-[#fff] w-32 h-32 bg-[#c9b38c]">
+            <i className="fas fa-home" />
+            </IconButton>
+            <div>
+                <h2 className="text-md font-bold text-[#c9b38c] ml-2">
+                  About Juristic
+                </h2>
+            </div>
+          </div>
+                <p className="text-lg text-gray-700">
+                  We are the most popular law firm with various law services!
+                </p>
+                <p className="text-base text-gray-700 mt-4">
+                  Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+                  libero, sit amet adipiscing sem neque sed ipsum.
+                </p>
+                <a
+                  href="#"
+                  className=" text-[#c9b38c] inline-block mt-4 hover:text-[#8b7a5c] transition duration-150 ease-out hover:ease-in"
+                >
+                  Read More About Us 
+                  <i className="fas fa-arrow-right px-2" />
+                </a>
         </div>
-        <div className="mt-32 grid lg:grid-cols-3 grid-cols-1 gap-y-6 gap-x-6">
-          {CONTENTS.map(({ name, feedback, title, date }, index) => (
-            <CardReview
-              key={index}
-              title={title}
-              name={name}
-              feedback={feedback}
-              date={date}
+        <div className="w-full md:w-1/3">
+          <div className="text-center md:text-left">
+            <img
+              src="https://juristic.themegeniuslab.com/wp-content/uploads/2020/01/about-min.jpg"
+              alt="About Image"
+              className="w-full  shadow-lg mb-4 h-[28rem]  rounded-sm object-cover"
             />
-          ))}
+          </div>
+        </div>
+        <div className="w-full md:w-1/3 px-3">
+          <div className="text-center md:text-left mt-8 md:mt-0">
+            <p className="text-base text-gray-700">
+             <span className="text-3xl font-bold">M</span>tempus, tellus eget condimentum rhoncus, sem quam semper
+              libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
+              blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec
+              odio et ante tincidunt tempus. Donec vitae sapien libero.
+            </p>
+            <div className="mt-8">
+              <div className="text-gray-800 font-bold">Michel Jhon</div>
+              <div className="text-gray-600">- CEO of the company</div>
+            </div>
+            <div className="mt-4">
+              <img
+                src="https://juristic.themegeniuslab.com/wp-content/uploads/2020/01/signature-min.png"
+                alt="Signature"
+                className="w-32 mx-auto"
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 }
 

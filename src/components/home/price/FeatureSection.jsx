@@ -67,77 +67,7 @@ export function FeatureSection() {
           </CardBody>
         </Card>
       </div>
-      <div className="container mx-auto pt-8 grid lg:gap-x-8 gap-y-8 grid-cols-1 lg:grid-cols-3">
-        <Card
-          className="col-span-2 bg-gray-100/50 overflow-hidden"
-          shadow={false}
-        >
-          <CardBody className="text-center">
-            <Typography
-              variant="h4"
-              color="blue-gray"
-              className="mb-2 font-medium"
-            >
-              Digital Product Design
-            </Typography>
-            <Typography className="text-center max-w-sm mx-auto text-base font-normal leading-7 !text-gray-500">
-              Check out our proven methods, guides, and exercises that help make
-              work better, and people happier.
-            </Typography>
-            <img
-              src="https://images.pexels.com/photos/4427630/pexels-photo-4427630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="laptop"
-              className="w-full xl:h-[355px] lg:h-[380px] md:h-[300px] h-[180px] lg:translate-y-6 translate-y-10 object-cover object-top"
-            />
-          </CardBody>
-        </Card>
-        <Card className="col-span-1 bg-gray-100/50" shadow={false}>
-          <CardBody className="text-center">
-            <Typography
-              variant="h4"
-              color="blue-gray"
-              className="mb-2 font-medium"
-            >
-              Join Our Community
-            </Typography>
-            <Typography className="text-center max-w-xs mx-auto text-base font-normal leading-7 !text-gray-500">
-              The time is now for it to be okay to be great. For being a bright
-              color.
-            </Typography>
-            <div className="flex items-center -space-x-4 justify-center mt-24">
-              <Avatar
-                size="xl"
-                variant="circular"
-                alt="user 1"
-                className="border-2 border-white hover:z-10 focus:z-10"
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-              />
-              <Avatar
-                size="xl"
-                variant="circular"
-                alt="user 2"
-                className="border-2 border-white hover:z-10 focus:z-10"
-                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80"
-              />
-              <Avatar
-                size="xl"
-                variant="circular"
-                alt="user 3"
-                className="border-2 border-white hover:z-10 focus:z-10"
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80"
-              />
-              <Avatar
-                size="xl"
-                variant="circular"
-                alt="user 4"
-                className="border-2 border-white hover:z-10 focus:z-10"
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
-              />
-            </div>
-       
-          </CardBody>
-        </Card>
-      </div>
+  
     </section>
   );
 }
