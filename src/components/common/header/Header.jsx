@@ -28,11 +28,18 @@ import {
   TagIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-
-
+import { Card } from "@material-tailwind/react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 import img from "../../images/jrapics/jranewwhite.png";
+const menuItems = [
+  {
+    title: "@material-tailwind/html",
+    description:
+      "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
+  }
+];
 const navListMenuItems = [
   {
     title: "Civil",
@@ -40,54 +47,55 @@ const navListMenuItems = [
     icon: SquaresPlusIcon,
     path: "/civil",
   },
-  {
-    title: "Criminal",
-    description: "Meet and learn about our dedication",
-    icon: UserGroupIcon,
-    path: "/criminal",
-  },
-  {
-    title: "Banking & Finance",
-    description: "Find the perfect solution for your needs.",
-    icon: Bars4Icon,
-    path: "/banking-finance",
-  },
-  {
-    title: "Securities Law",
-    description: "Learn how we can help you achieve your goals.",
-    icon: SunIcon,
-    path: "/securities-laws",
-  },
-  {
-    title: "Foreign Exchange",
-    description: "Reach out to us for assistance or inquiries",
-    icon: GlobeAmericasIcon,
-    path: "/foreign-exchange",
-  },
-  {
-    title: "Intellectual Property Rights",
-    description: "Find the perfect solution for your needs.",
-    icon: PhoneIcon,
-    path: "/intellectual-property-rights",
-  },
-  {
-    title: "Constitutional Law",
-    description: "Read insightful articles, tips, and expert opinions.",
-    icon: NewspaperIcon,
-    path: "/constitutional-law",
-  },
-  {
-    title: "Service Law",
-    description: "Find the perfect solution for your needs.",
-    icon: RectangleGroupIcon,
-    path: "/service-law",
-  },
-  {
-    title: "Alternate Dispute Redressal	",
-    description: "Explore limited-time deals and bundles",
-    icon: TagIcon,
-    path: "/alternate-dispute-resolution",
-  },
+
+  // {
+  //   title: "Criminal",
+  //   description: "Meet and learn about our dedication",
+  //   icon: UserGroupIcon,
+  //   path: "/criminal",
+  // },
+  // {
+  //   title: "Banking & Finance",
+  //   description: "Find the perfect solution for your needs.",
+  //   icon: Bars4Icon,
+  //   path: "/banking-finance",
+  // },
+  // {
+  //   title: "Securities Law",
+  //   description: "Learn how we can help you achieve your goals.",
+  //   icon: SunIcon,
+  //   path: "/securities-laws",
+  // },
+  // {
+  //   title: "Foreign Exchange",
+  //   description: "Reach out to us for assistance or inquiries",
+  //   icon: GlobeAmericasIcon,
+  //   path: "/foreign-exchange",
+  // },
+  // {
+  //   title: "Intellectual Property Rights",
+  //   description: "Find the perfect solution for your needs.",
+  //   icon: PhoneIcon,
+  //   path: "/intellectual-property-rights",
+  // },
+  // {
+  //   title: "Constitutional Law",
+  //   description: "Read insightful articles, tips, and expert opinions.",
+  //   icon: NewspaperIcon,
+  //   path: "/constitutional-law",
+  // },
+  // {
+  //   title: "Service Law",
+  //   description: "Find the perfect solution for your needs.",
+  //   icon: RectangleGroupIcon,
+  //   path: "/service-law",
+  // },
+  // {
+  //   title: "Alternate Dispute Redressal	",
+  //   description: "Explore limited-time deals and bundles",
+  //   icon: TagIcon,
+  //   path: "/alternate-dispute-resolution",
+  // },
 ];
 
 const navListMenuItemsInsights = [
@@ -113,13 +121,13 @@ function NavListMenu() {
       <Link to={path} key={key}>
         <MenuItem className="  ">
           <div>
-            <Typography
+            <menuitems
               variant="h6"
               color="blue-gray"
               className=" items-start text-sm font-bold"
             >
               {title}
-            </Typography>
+            </menuitems>
           </div>
         </MenuItem>
       </Link>
@@ -159,7 +167,7 @@ function NavListMenu() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+          <ul className="grid gap-y-2 outline-none outline-0">
             {renderItems}
           </ul>
         </MenuList>
@@ -177,7 +185,7 @@ function NavListMenuInsights() {
   const renderItems = navListMenuItemsInsights.map(
     ({ icon, title, description, path }, key) => (
       <Link to={path} key={key}>
-        <MenuItem className=" flex flex-col  ">
+        <MenuItem className=" flex   ">
           {/* <div className="items-start flex rounded-lg !bg-blue-gray-50 p-2 ">
             {React.createElement(icon, {
               strokeWidth: 2,
@@ -200,42 +208,6 @@ function NavListMenuInsights() {
 
   return (
     <React.Fragment>
-      <Menu
-        open={isMenuOpen}
-        handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-      >
-        <MenuHandler>
-          <Typography as="div" variant="small" className="font-medium">
-            <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-100"
-              selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-            >
-              insights
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-          </Typography>
-        </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0 ">
-            {renderItems}
-          </ul>
-        </MenuList>
-      </Menu>
       <div className="block lg:hidden">
         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
       </div>
@@ -244,6 +216,7 @@ function NavListMenuInsights() {
 }
 
 function NavList() {
+  const [openMenu, setOpenMenu] = React.useState(false);
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
@@ -263,9 +236,26 @@ function NavList() {
         color="blue-gray"
         className="font-medium text-gray-100"
       >
+      </Typography>
+      <Typography
+        as={Link} // Use Link instead of a
+        to="/CoreTeam" // Specify the home path
+        variant="small"
+        color="blue-gray"
+        className="font-medium text-gray-100"
+      >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Core Team
+          Expertise
         </ListItem>
+      </Typography>
+      <Typography
+        as={Link} // Use Link instead of a
+        to="/CoreTeam" // Specify the home path
+        variant="small"
+        color="blue-gray"
+        className="font-medium text-gray-100"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">Teams</ListItem>
       </Typography>
 
       <NavListMenuInsights />
@@ -277,7 +267,7 @@ function NavList() {
         className="font-medium text-gray-100"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Contact Us
+          Career
         </ListItem>
       </Typography>
     </List>
@@ -308,7 +298,7 @@ export default function Header() {
             <NavList />
           </div>
           <div className="hidden gap-2 lg:flex">
-          <Typography
+            <Typography
               as={Link} // Use Link instead of a
               to="/contact" // Specify the contact path
               variant="small"
@@ -318,12 +308,15 @@ export default function Header() {
               {/* <ListItem className="flex items-center gap-2 py-2 pr-4">
                 Contact Us
               </ListItem> */}
-            <Button size="md" fullWidth className="bg-[#c9b38c] hover:bg-[#b99c69]"> 
-              Contect Us
-            </Button>
+              <Button
+                size="md"
+                fullWidth
+                className="bg-[#c9b38c] hover:bg-[#b99c69]"
+              >
+                Contect Us
+              </Button>
             </Typography>
-            
-            
+
             {/* <Button variant="gradient" size="sm">
               Contact Us
             </Button> */}
@@ -354,9 +347,9 @@ export default function Header() {
               {/* <ListItem className="flex items-center gap-2 py-2 pr-4">
                 Contact Us
               </ListItem> */}
-            <Button variant="gradient" size="sm" fullWidth>
-              Contect Us
-            </Button>
+              <Button variant="gradient" size="sm" fullWidth>
+                Contect Us
+              </Button>
             </Typography>
           </div>
         </Collapse>

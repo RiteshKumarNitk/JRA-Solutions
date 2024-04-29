@@ -63,36 +63,41 @@ const Pages = () => {
   useEffect(() => {
     setOpen(true);
   }, []);
-  
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
   return (
-    <div className="pages-container">
+    <div className="pages-container" >
       <>
         <Dialog
           open={open}
           handler={handleOpen}
           dismiss={{ outsidePress: false, enabled: true, escapeKey: false }}
+            className=" shadow-none"
         >
-          <DialogHeader>Its a simple dialog.</DialogHeader>
-          <DialogBody>
-            The key to more success is to have a lot of pillows. Put it this
-            way, it took me twenty five years to get these plants, twenty five
-            years of blood sweat and tears, and I&apos;m never giving up,
-            I&apos;m just getting started. I&apos;m up to something. Fan luv.
+          <DialogHeader className="flex justify-center gap-7 pt-2">DISCLAIMER</DialogHeader>
+          <hr className="mt-2 mb-4 max-w-full" />
+          <DialogBody className="text-justify">
+            The Bar Council of India does not permit advertisement or
+            solicitation by advocates in any form or manner. By accessing this
+            website, you acknowledge and confirm that you are seeking
+            information relating to Virendra Agrawal & Co. of your own accord
+            and that there has been no form of solicitation, advertisement or
+            inducement by Virendra Agrawal & Co.or its members. The Bar Council
+            of India does not permit advertisement or solicitation by advocates
+            in any form or manner. By accessing this website, you acknowledge
+            and confirm that you are seeking information relating to Virendra
+            Agrawal & Co. of your own accord and that there has been no form of
+            solicitation, advertisement or inducement by Virendra Agrawal & Co.
+            or its members.
           </DialogBody>
-          <DialogFooter>
-            <Button
-              variant="text"
-              color="red"
-              onClick={handleOpen}
-              className="mr-1"
-            >
-              <span>I Agree</span>
-            </Button>
-            <Button variant="gradient" color="green" onClick={handleOpen}>
-              <span>Confirm</span>
-            </Button>
+          <hr className="mt-2 mb-4 max-w-full" />
+          <DialogFooter className="flex justify-center gap-7 pt-2">
+            <div >
+              <Button variant="gradient" color="green" className=" shadow-none" onClick={handleOpen}>
+                <span>I Agree</span>
+              </Button>
+            </div>
           </DialogFooter>
         </Dialog>
       </>
