@@ -29,9 +29,9 @@ const Home = () => {
   return (
     <>
       <Hero  slides={slidesData}/>
+      <Recent />
       <Featured />
       <Team />
-      <Recent />
       {/* <Awards /> */}
       {/* <Price /> */}
       <Location />

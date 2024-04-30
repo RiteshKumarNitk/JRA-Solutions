@@ -1,20 +1,28 @@
 import React from "react";
 import { IconButton } from "@material-tailwind/react";
-import { RobotoSlab } from "@fontsource/roboto-slab";
-import "./recent.css";
+// import { RobotoSlab } from "@fontsource/roboto-slab";
+// import "./recent.css";
+import { IoHomeOutline } from "react-icons/io5";
+
+import {
+
+  Typography,
+} from '@material-tailwind/react';
 export function Recent() {
   return (
     <section
       className="bg-gray-100 py-16"
-      style={{ fontFamily: "Roboto Slab" }}
+      // style={{ fontFamily: "Roboto Slab" }}
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/3">
             <div className="text-center md:text-left mb-8 md:mb-0 flex items-center">
-              <IconButton className="rounded-full text-[#fff] w-32 h-32 bg-[#c9b38c]">
-                <i className="fas fa-home" />
-              </IconButton>
+            
+              <Typography   className="flex text-[#fff] justify-center mb-3">
+                <IoHomeOutline className='text-4xl center bg-[#c9b38c] shadow-[#f5c97e]  rounded-full p-1 font-md' />
+            
+          </Typography>
               <div>
                 <h2 className="text-md font-bold text-[#c9b38c] ml-2">
                   About Juristic

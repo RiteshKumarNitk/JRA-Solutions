@@ -21,6 +21,10 @@ import ServiceLaw from "../service-law/ServiceLaw";
 import AlternateDisputeResolution from "../alternate-dispute-resolution/AlternateDisputeResolution";
 import CoreTeam from "../coreTeam/CoreTeam";
 import Newsltr from "../newsltr/Newsltr";
+// import '@material-tailwind/react/tailwind.css'; // Ensure Tailwind CSS is imported
+
+
+import { RobotoSlab } from "@fontsource/roboto-slab";
 import Articles from "../articles/Articles";
 import {
   // Card,
@@ -67,7 +71,7 @@ const Pages = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
   return (
-    <div className="pages-container" >
+    <div className="pages-container font-roboto" >
       <>
         <Dialog
           open={open}

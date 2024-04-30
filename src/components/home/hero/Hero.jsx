@@ -55,8 +55,8 @@ const Hero = ({ slides }) => {
               className="h-[full] w-full object-cover"
             />
             <div className="absolute bottom-64 left-32 text-white">
-              <h2 className="text-6xl font-bold">{slide.title}</h2>
-              <p className="mt-4 text-lg">{slide.description}</p>
+              <h2 className="lg:text-6xl xl:text-6xl md:text-2xl sm:text-md font-bold">{slide.title}</h2>
+              <p className="mt-4 text-lg md:text-lg sm:text-sm">{slide.description}</p>
               {slide.button && (
                 <Button size="lg" className="mt-4 px-4 py-2 bg-[#c9b38c] hover:bg-[#b99c69] text-white">
                   {slide.button.text}

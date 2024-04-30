@@ -9,40 +9,41 @@ import {
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { HiOutlineBriefcase } from "react-icons/hi2";
 
 function TeamCard({ img, name, title }) {
   return (
-    <Card className="gap-6" shadow={true} style={{ width: 'auto', height: 'auto',marginRight:'1rem', marginLeft:'1rem', marginBottom:'.2rem' }}>
-      <CardBody className="text-center">
-        <Avatar
-          src={img}
-          alt={name}
-          variant="rectangle"
-          size="xxxl"
-          className="mx-auto mb-16 object-top"
-        />
-        <Typography variant="h5" color="blue-gray" className="font-medium text-xl mb-2">
-          {name}
-        </Typography>
-        <Typography
-          color="blue-gray"
-          className="text-base font-semibold text-gray-600 mb-4"
-        >
-          {title}
-        </Typography>
-        <div className="flex items-center justify-center gap-2">
-          <IconButton variant="text" color="gray">
-            <i className="fa-brands fa-twitter text-lg" />
-          </IconButton>
-          <IconButton variant="text" color="gray">
-            <i className="fa-brands fa-linkedin text-lg" />
-          </IconButton>
-          <IconButton variant="text" color="gray">
-            <i className="fa-brands fa-dribbble text-lg" />
-          </IconButton>
-        </div>
-      </CardBody>
-    </Card>
+    <Card className="gap-6" shadow={true} style={{ width: 'full', height: 'auto', marginRight: '1rem', marginLeft: '1rem', marginBottom: '.2rem' }}>
+    <CardBody className="text-center">
+      <Avatar
+        src={img}
+        alt={name}
+        variant="rectangle"
+        size="3xl"
+        className="mx-auto mb-16 object-top"
+      />
+      <Typography variant="h5" color="blue-gray" className="font-medium text-xl mb-2">
+        {name}
+      </Typography>
+      <Typography
+        color="blue-gray"
+        className="text-base font-semibold text-gray-600 mb-4"
+      >
+        {title}
+      </Typography>
+      <div className="flex items-center justify-center gap-2">
+        <IconButton variant="text" color="gray">
+          <i className="fa-brands fa-twitter text-lg" />
+        </IconButton>
+        <IconButton variant="text" color="gray">
+          <i className="fa-brands fa-linkedin text-lg" />
+        </IconButton>
+        <IconButton variant="text" color="gray">
+          <i className="fa-brands fa-dribbble text-lg" />
+        </IconButton>
+      </div>
+    </CardBody>
+  </Card>
   );
 }
 
@@ -81,10 +82,10 @@ const members = [
 
 function TeamSection12() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Number of items to show at once
+    slidesToShow: 3, // Number of items to show at once
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -114,18 +115,22 @@ function TeamSection12() {
     <section className="py-8 px-8 lg:py-28">
       <div className="container mx-auto">
         <div className="mb-16 text-center lg:mb-28">
-          <Typography variant="h6" color="blue-gray" className="text-lg">
-            Meet the Team
+            {/* <i className="fa-brands fa-twitter text-red-900 text-3xl" /> */}
+          <Typography   className="flex text-[#fff] justify-center mb-3">
+            <HiOutlineBriefcase className='text-4xl center bg-[#c9b38c] shadow-[#f5c97e]  rounded-full p-1 font-md'/>
+          </Typography>
+          <Typography  color="blue-gray" className="text-lg text-md   text-[#c9b38c] ml-2">
+          Here Our Best Work
           </Typography>
           <Typography variant="h1" color="blue-gray" className="my-2 !text-2xl lg:!text-4xl">
-            Behind the Success: Our Dedicated Team
+          Insides & News 
           </Typography>
           <Typography variant="lead" className="mx-auto w-full !text-gray-500 max-w-4xl">
             From visionary leadership to creative talent, and technical wizards, each team member
             plays a pivotal role in delivering the exceptional service and innovative solutions.
           </Typography>
         </div>
-        <Slider {...settings}>
+        <Slider {...settings} className="mx-auto max-w-full">
           {members.map((props, key) => (
             <TeamCard key={key} {...props} />
           ))}

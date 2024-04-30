@@ -17,8 +17,9 @@ export function FeatureSection() {
         >
           Turn your idea into a startup
         </Typography>
-        <Typography variant="lead" className="mx-auto max-w-lg !text-gray-500" > We&apos;re constantly trying to express ourselves and actualize our
-          dreams. If you have the opportunity to play </Typography>
+        <Typography variant="lead" className="mx-auto max-w-lg !text-gray-500" >
+        heree kargarrroo aag ggee geerr ggeer aagg  
+        </Typography>
       </div>
       <div className="mb-8 container mx-auto grid lg:gap-x-8 gap-y-8 grid-cols-1 lg:grid-cols-3">
         <Card

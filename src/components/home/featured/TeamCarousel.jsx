@@ -5,7 +5,7 @@ import TeamCard from "./TeamCard"; // Assuming TeamCard component is imported
 const TeamCarousel = ({ members }) => {
   // Slick slider settings
   const sliderSettings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -30,7 +30,7 @@ const TeamCarousel = ({ members }) => {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
