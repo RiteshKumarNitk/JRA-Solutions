@@ -125,7 +125,7 @@ const Footer = () => {
               <h6 class="mb-4 flex justify-center font-bold  uppercase md:justify-start">
                 Useful links
               </h6>
-              <div className="grid grid-cols-3 justify-between gap-4 font-thin">
+              <div className="grid grid-cols-3 justify-between  font-thin">
                 <div className="">
                   <p class="mb-4">
                     <a href="#!">Teams</a>
@@ -140,7 +140,7 @@ const Footer = () => {
                     <a href="#!">Help</a>
                   </p>
                 </div>
-                <div>
+                {/* <div>
                   <p class="mb-4">
                     <a href="#!">Teams</a>
                   </p>
@@ -153,7 +153,7 @@ const Footer = () => {
                   <p>
                     <a href="#!">Help</a>
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div>

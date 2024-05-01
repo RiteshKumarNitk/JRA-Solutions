@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardBody, Typography, Avatar } from "@material-tailwind/react";
-
+import LatestBlogSection from "./LatestBlogSection";
 export function FeatureSection() {
   return (
     <section className="lg:py-28 py-10 px-8">
@@ -21,7 +21,8 @@ export function FeatureSection() {
         heree kargarrroo aag ggee geerr ggeer aagg  
         </Typography>
       </div>
-      <div className="mb-8 container mx-auto grid lg:gap-x-8 gap-y-8 grid-cols-1 lg:grid-cols-3">
+      
+      {/* <div className="mb-8 container mx-auto grid lg:gap-x-8 gap-y-8 grid-cols-1 lg:grid-cols-3">
         <Card
           className="col-span-1 bg-gray-100/50 overflow-hidden"
           shadow={false}
@@ -67,7 +68,9 @@ export function FeatureSection() {
             />
           </CardBody>
         </Card>
-      </div>
+      </div> */}
+
+      <LatestBlogSection/>
   
     </section>
   );
