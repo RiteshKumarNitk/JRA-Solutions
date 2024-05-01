@@ -8,7 +8,7 @@ import { Typography } from "@material-tailwind/react";
 export function Recent() {
   return (
     <section
-      className="bg-gray-100 py-16"
+      className=" py-16"
       // style={{ fontFamily: "Roboto Slab" }}
     >
       <div className="container mx-auto px-4">

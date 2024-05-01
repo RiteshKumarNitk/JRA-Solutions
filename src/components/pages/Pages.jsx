@@ -82,23 +82,12 @@ const Pages = () => {
           <DialogHeader className="flex justify-center gap-7 pt-2">DISCLAIMER</DialogHeader>
           <hr className="mt-2 mb-4 max-w-full" />
           <DialogBody className="text-justify">
-            The Bar Council of India does not permit advertisement or
-            solicitation by advocates in any form or manner. By accessing this
-            website, you acknowledge and confirm that you are seeking
-            information relating to Virendra Agrawal & Co. of your own accord
-            and that there has been no form of solicitation, advertisement or
-            inducement by Virendra Agrawal & Co.or its members. The Bar Council
-            of India does not permit advertisement or solicitation by advocates
-            in any form or manner. By accessing this website, you acknowledge
-            and confirm that you are seeking information relating to Virendra
-            Agrawal & Co. of your own accord and that there has been no form of
-            solicitation, advertisement or inducement by Virendra Agrawal & Co.
-            or its members.
+          Please note that the issue is for Private Circulation only. While every effort has been taken to avoid errors or omissions in this publication, any mistake or omission that may have crept in is not intentional. It is suggested that to avoid any doubt the reader should cross-check all the facts, laws and contents of the publication with the original Government publication or notification or any other concerned original document. It is notified that neither the publisher nor the author or seller will be responsible for any damage or action to anyone, of any kind in any manner, thereon.
           </DialogBody>
           <hr className="mt-2 mb-4 max-w-full" />
           <DialogFooter className="flex justify-center gap-7 pt-2">
             <div >
-              <Button variant="gradient" color="green" className=" shadow-none" onClick={handleOpen}>
+              <Button  className=" shadow-none rounded-none  bg-[#c9b38c] text-[#fff]  " onClick={handleOpen}>
                 <span>I Agree</span>
               </Button>
             </div>
