@@ -42,60 +42,26 @@ const menuItems = [
 ];
 const navListMenuItems = [
   {
-    title: "Civil",
-    description: "Find the perfect solution for your needs.",
+    title: "About Us",
+    description: "Meet and learn about our dedication",
+    icon: UserGroupIcon,
+    path: "/criminal",
+  },
+  {
+    title: "Teams",
+    // description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
     path: "/civil",
   },
 
-  // {
-  //   title: "Criminal",
-  //   description: "Meet and learn about our dedication",
-  //   icon: UserGroupIcon,
-  //   path: "/criminal",
-  // },
+ 
   // {
   //   title: "Banking & Finance",
   //   description: "Find the perfect solution for your needs.",
   //   icon: Bars4Icon,
   //   path: "/banking-finance",
   // },
-  // {
-  //   title: "Securities Law",
-  //   description: "Learn how we can help you achieve your goals.",
-  //   icon: SunIcon,
-  //   path: "/securities-laws",
-  // },
-  // {
-  //   title: "Foreign Exchange",
-  //   description: "Reach out to us for assistance or inquiries",
-  //   icon: GlobeAmericasIcon,
-  //   path: "/foreign-exchange",
-  // },
-  // {
-  //   title: "Intellectual Property Rights",
-  //   description: "Find the perfect solution for your needs.",
-  //   icon: PhoneIcon,
-  //   path: "/intellectual-property-rights",
-  // },
-  // {
-  //   title: "Constitutional Law",
-  //   description: "Read insightful articles, tips, and expert opinions.",
-  //   icon: NewspaperIcon,
-  //   path: "/constitutional-law",
-  // },
-  // {
-  //   title: "Service Law",
-  //   description: "Find the perfect solution for your needs.",
-  //   icon: RectangleGroupIcon,
-  //   path: "/service-law",
-  // },
-  // {
-  //   title: "Alternate Dispute Redressal	",
-  //   description: "Explore limited-time deals and bundles",
-  //   icon: TagIcon,
-  //   path: "/alternate-dispute-resolution",
-  // },
+ 
 ];
 
 const navListMenuItemsInsights = [
@@ -311,7 +277,7 @@ export default function Header() {
               <Button
                 size="md"
                 fullWidth
-                className="bg-[#c9b38c] hover:bg-[#b99c69]"
+                className="bg-[#c9b38c] font-light rounded-none hover:bg-[#b99c69]"
               >
                 Contect Us
               </Button>
