@@ -4,10 +4,7 @@ import { IconButton } from "@material-tailwind/react";
 // import "./recent.css";
 import { IoHomeOutline } from "react-icons/io5";
 
-import {
-
-  Typography,
-} from '@material-tailwind/react';
+import { Typography } from "@material-tailwind/react";
 export function Recent() {
   return (
     <section
@@ -17,17 +14,15 @@ export function Recent() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/3">
-            <div className="text-center md:text-left mb-8 md:mb-0 flex items-center">
-            
-              <Typography   className="flex text-[#fff] justify-center mb-3">
-                <IoHomeOutline className='text-4xl center bg-[#c9b38c] shadow-[#f5c97e]  rounded-full p-1 font-md' />
-            
-          </Typography>
-              <div>
-                <h2 className="text-md font-bold text-[#c9b38c] ml-2">
+            <div className="text-center md:text-left  md:mb-0 flex items-center mb-5">
+              <Typography className="flex text-[#fff] justify-center items-center">
+                <IoHomeOutline className="text-4xl center bg-[#c9b38c] shadow-[#f5c97e] items-center  rounded-full p-1 font-md" />
+              </Typography>
+             
+                <h2 className="text-md ali text-[#c9b38c] ml-2">
                   About Juristic
                 </h2>
-              </div>
+             
             </div>
             <p className="text-lg text-gray-700">
               We are the most popular law firm with various law services!

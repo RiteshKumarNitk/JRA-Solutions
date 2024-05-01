@@ -50,7 +50,7 @@ const Hero = ({ slides }) => {
               alt={`Slide ${index + 1}`}
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8 text-white bg-black bg-opacity-50">
+            <div className="absolute inset-0 flex flex-col justify-end items-center text-center p-8 b-6 text-white bg-black bg-opacity-50">
               <h2 className="text-4xl md:text-6xl font-bold mb-4">{slide.title}</h2>
               <p className="text-lg md:text-xl mb-6">{slide.description}</p>
               {slide.button && (
