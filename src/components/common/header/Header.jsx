@@ -212,7 +212,7 @@ function NavList() {
       <NavListMenuInsights />
       <Typography
         as={Link} // Use Link instead of a
-        to="/contact" // Specify the contact path
+        to="/Contact" // Specify the contact path
         variant="small"
         color="blue-gray"
         className="font-medium text-gray-100"
@@ -286,7 +286,7 @@ export default function Header() {
           <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
             <Typography
               as={Link} // Use Link instead of a
-              to="/contact" // Specify the contact path
+              to="/Contact" // Specify the contact path
               variant="small"
               color="blue-gray"
               className="font-medium text-gray-100"

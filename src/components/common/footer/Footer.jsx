@@ -56,11 +56,12 @@ const Footer = () => {
            
           </div>
 
-          <div class="me-12 hidden lg:block">
+          <div class="hidden lg:block">
             <img src={img} alt="" />
           </div>
 
-          <div class="me-12 hidden lg:block">
+          <div class=" hidden lg:block">
+            <div className="font font-medium mb-1">News Letter</div>
             <div className="relative flex w-full max-w-full  rounded-md   ">
               <Input
                 type="email"

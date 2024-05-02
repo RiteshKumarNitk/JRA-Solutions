@@ -12,6 +12,7 @@ import aboutUs from "../about-us/aboutUs";
 import Teams from "../teams/Teams";
 import Media from "../media/Media";
 import Career from "../career/Career";
+import Contact from "../contact/Contact";
 
 
 
@@ -73,6 +74,7 @@ const Pages = () => {
           <Route exact path="/Teams" component={Teams} />
           <Route exact path="/Media" component={Media} />
           <Route exact path="/Career" component={Career} />
+          <Route exact path="/Contact" component={Contact} />
         </Switch>
         <Footer />
       </Router>

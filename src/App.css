@@ -8,15 +8,19 @@
   * {
     scrollbar-width: thin;
     scrollbar-color: #262b3e #ffffff;
+    
   }
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 21px;
+    
+    
   }
 
   *::-webkit-scrollbar-track {
     background: #ffffff;
+    border-radius: 10px;
   }
 
   *::-webkit-scrollbar-thumb {
