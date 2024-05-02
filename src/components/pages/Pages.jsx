@@ -13,6 +13,7 @@ import Teams from "../teams/Teams";
 import Media from "../media/Media";
 import Career from "../career/Career";
 import Contact from "../contact/Contact";
+import adminlogin from "../../admin/adminLogin/adminlogin";
 
 
 
@@ -75,6 +76,7 @@ const Pages = () => {
           <Route exact path="/Media" component={Media} />
           <Route exact path="/Career" component={Career} />
           <Route exact path="/Contact" component={Contact} />
+          <Route exact path="/wp-admin" component={adminlogin} />
         </Switch>
         <Footer />
       </Router>
