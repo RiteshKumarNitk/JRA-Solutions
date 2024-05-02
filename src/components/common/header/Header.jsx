@@ -18,50 +18,31 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
-  Bars4Icon,
-  GlobeAmericasIcon,
-  NewspaperIcon,
-  PhoneIcon,
-  RectangleGroupIcon,
   SquaresPlusIcon,
-  SunIcon,
-  TagIcon,
-  UserGroupIcon,
+ 
 } from "@heroicons/react/24/solid";
-import { Card } from "@material-tailwind/react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 import img from "../../images/jrapics/jranewwhite.png";
-const menuItems = [
-  {
-    title: "@material-tailwind/html",
-    description:
-      "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
-  }
-];
+// const menuItems = [
+//   {
+//     title: "@material-tailwind/html",
+//     description:
+//       "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
+//   }
+// ];
 const navListMenuItems = [
   {
     title: "About Us",
-    description: "Meet and learn about our dedication",
-    icon: UserGroupIcon,
-    path: "/criminal",
+    description: "Find the perfect solution for your needs.",
+    path: "/aboutUs",
   },
   {
     title: "Teams",
-    // description: "Find the perfect solution for your needs.",
-    icon: SquaresPlusIcon,
-    path: "/civil",
+    description: "Find the perfect solution for your needs.",
+    path: "/Teams",
   },
 
- 
-  // {
-  //   title: "Banking & Finance",
-  //   description: "Find the perfect solution for your needs.",
-  //   icon: Bars4Icon,
-  //   path: "/banking-finance",
-  // },
- 
 ];
 
 const navListMenuItemsInsights = [
@@ -83,7 +64,7 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description, path }, key) => (
+    ({ title, path }, key) => (
       <Link to={path} key={key}>
         <MenuItem className="  ">
           <div>
@@ -146,10 +127,10 @@ function NavListMenu() {
 }
 
 function NavListMenuInsights() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItemsInsights.map(
-    ({ icon, title, description, path }, key) => (
+    ({  title, path }, key) => (
       <Link to={path} key={key}>
         <MenuItem className=" flex   ">
           {/* <div className="items-start flex rounded-lg !bg-blue-gray-50 p-2 ">
@@ -182,7 +163,7 @@ function NavListMenuInsights() {
 }
 
 function NavList() {
-  const [openMenu, setOpenMenu] = React.useState(false);
+  // const [openMenu, setOpenMenu] = React.useState(false);
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
@@ -195,33 +176,37 @@ function NavList() {
         <ListItem className="flex items-center gap-2 py-2">Home</ListItem>
       </Typography>
       <NavListMenu />
+   
       <Typography
         as={Link} // Use Link instead of a
-        to="/CoreTeam" // Specify the home path
-        variant="small"
-        color="blue-gray"
-        className="font-medium text-gray-100"
-      >
-      </Typography>
-      <Typography
-        as={Link} // Use Link instead of a
-        to="/CoreTeam" // Specify the home path
+        to="/Media" // Specify the home path
         variant="small"
         color="blue-gray"
         className="font-medium text-gray-100"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Expertise
+          Media
         </ListItem>
       </Typography>
       <Typography
         as={Link} // Use Link instead of a
-        to="/CoreTeam" // Specify the home path
+        to="/Blog" // Specify the home path
         variant="small"
         color="blue-gray"
         className="font-medium text-gray-100"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">Teams</ListItem>
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+        Blog
+        </ListItem>
+      </Typography>
+      <Typography
+        as={Link} // Use Link instead of a
+        to="/Career" // Specify the home path
+        variant="small"
+        color="blue-gray"
+        className="font-medium text-gray-100"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">Career</ListItem>
       </Typography>
 
       <NavListMenuInsights />
@@ -233,7 +218,7 @@ function NavList() {
         className="font-medium text-gray-100"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Career
+          Content us
         </ListItem>
       </Typography>
     </List>
@@ -277,15 +262,11 @@ export default function Header() {
               <Button
                 size="md"
                 fullWidth
-                className="bg-[#c9b38c] font-light rounded-none hover:bg-[#b99c69]"
+                className="bg-[#c9b38c] hover:bg-[#b99c69]"
               >
                 Contect Us
               </Button>
             </Typography>
-
-            {/* <Button variant="gradient" size="sm">
-              Contact Us
-            </Button> */}
           </div>
           <IconButton
             variant="text"
@@ -310,9 +291,7 @@ export default function Header() {
               color="blue-gray"
               className="font-medium text-gray-100"
             >
-              {/* <ListItem className="flex items-center gap-2 py-2 pr-4">
-                Contact Us
-              </ListItem> */}
+             
               <Button variant="gradient" size="sm" fullWidth>
                 Contect Us
               </Button>

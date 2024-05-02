@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, Typography, Avatar } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import LatestBlogSection from "./LatestBlogSection";
 export function FeatureSection() {
   return (

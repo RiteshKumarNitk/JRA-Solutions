@@ -1,7 +1,5 @@
 import React from "react";
-import { IconButton } from "@material-tailwind/react";
-// import { RobotoSlab } from "@fontsource/roboto-slab";
-// import "./recent.css";
+// import { IconButton } from "@material-tailwind/react";
 import { IoHomeOutline } from "react-icons/io5";
 
 import { Typography } from "@material-tailwind/react";
@@ -32,7 +30,7 @@ export function Recent() {
               libero, sit amet adipiscing sem neque sed ipsum.
             </p>
             <a
-              href="#"
+              href=""
               className=" text-[#c9b38c] inline-block mt-4 hover:text-[#8b7a5c] transition duration-150 ease-out hover:ease-in"
             >
               Read More About Us

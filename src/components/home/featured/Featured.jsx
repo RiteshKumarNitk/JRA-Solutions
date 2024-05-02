@@ -1,8 +1,6 @@
 import React from "react";
-import Heading from "../../common/Heading";
 import "./Featured.css";
-import FeaturedCard from "./FeaturedCard";
-import { SampleCard } from "./SampleCard";
+
 import TeamSection12 from "./TeamSection12";
 
 const Featured = () => {

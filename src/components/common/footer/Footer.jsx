@@ -1,5 +1,4 @@
 import React from "react";
-import { footer } from "../../data/Data";
 import "./footer.css";
 import img from "../../images/jrapics/jranewwhite.png";
 import { Typography } from "@material-tailwind/react";
